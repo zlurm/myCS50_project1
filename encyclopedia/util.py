@@ -57,3 +57,15 @@ def get_entry(title):
 def get_title(title):
       s = get_entry(title).split("\n",1)[0]
       return s[2:] 
+
+def get_part_match(part_str):
+    entries = list_entries()
+    entries_match = []
+
+    for entry in entries:
+        if part_str in entry:
+            entries_match.append(entry)
+
+    return entries_match
+
+

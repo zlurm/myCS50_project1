@@ -5,7 +5,7 @@ from django import forms
 from . import util
 
 class SearchForm(forms.Form):
-    mysearch = forms.CharField(label="New Search")
+    mysearch = forms.CharField(label="Search")
 
 
 def index(request):
@@ -21,5 +21,14 @@ def wiki(request, page_name):
             "entry":util.get_entry(page_name),"title":util.get_title(page_name)
         })
 
-
+def search(request):
+    query = request.GET.get("q")
+    if util.get_entry(query):
+        return render(request, "encyclopedia/entry.html", {
+            "entry":util.get_entry(query)
+        })
+    else:
+        return render(request, "encyclopedia/search.html", {
+            "results":util.get_part_match(query)
+        })
     

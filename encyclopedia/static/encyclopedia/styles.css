@@ -9,7 +9,6 @@ code {
 }
 
 h1 {
-    color: greenyellow;
     margin-top: 0px;
     padding-top: 20px;
 }
@@ -44,6 +43,3 @@ textarea {
     text-align: center;
 }
 
-#test {
-    color: blue
-}
