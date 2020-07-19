@@ -1,0 +1,24 @@
+{% extends "encyclopedia/layout.html" %}
+{% block title %}
+Create new page
+{% endblock %}
+
+{% block body %}
+    <body>
+        <div id="NP-form-container">
+            <h1 id="NP-heading">Create A New Page</h1>
+            <form action="{% url 'new' %}" method="post">
+                {% csrf_token %}
+                {{ form }}
+                <input type="submit">
+
+                <!--
+                <label for="titleNP">Title</label>
+                <textarea name="titleNP" id="" cols="30" rows="1"></textarea>
+                <label for="contentNP">Content</label>
+                <textarea name="contentNP" id="" cols="30" rows="10"></textarea>
+                <input type="submit"> -->
+            </form>
+        </div>
+    </body>
+{% endblock %}
