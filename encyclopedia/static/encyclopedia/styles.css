@@ -3,6 +3,9 @@ body {
     margin: 0;
     background-color: white;
 }
+a {
+    color:black;
+}
 
 code {
     white-space: pre;
@@ -14,8 +17,28 @@ h1 {
 }
 
 textarea {
+    display:block;
+    margin-top: 5px;
+    margin-bottom: 40px;
+    width: 50%;
+    /*
     height: 90vh;
     width: 80%;
+    */
+}
+
+#NP-form-container {
+    margin: 20px;
+}
+
+#NP-heading {
+    padding-bottom: 40px;
+}
+
+label {
+    font-weight: bold;
+    font-size: large;
+    display:block;
 }
 
 .main {
